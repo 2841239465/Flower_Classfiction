@@ -1,0 +1,10 @@
+V2.0：
+	新增：优化策略StepLR，每6个epoch，lr减少
+	修改：BATCH_SIZE 修改为8，lr修改为0.01
+	
+	可选项：lr改为0.05，loss_fun使用NLLLoss()，step_size改为7（可能会提高准确率）
+
+已知错误：
+	1、任务四中提供的resnet18模型分类结果和提供图片不一致
+	2、任务二中随机裁剪似乎会降低模型准确率
+	3、任务4，main中engine.util包存在无法导入问题

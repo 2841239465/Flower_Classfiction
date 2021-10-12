@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask上传图片演示</title>
+</head>
+<body>
+    <div>
+        <h1>上传图片</h1>
+        <img src="{{ url_for('get_file', fileName=fname)}}" />
+        <p>对上传照片的分类为:{{result["prediction"]}}</p>
+    </div>
+
+
+    <div id='button'>
+        <form action="{{ url_for('thanks') }}" method="POST">
+            <input type="radio" value="Correct" name='Correctness'> Correct<br>
+            <input type="radio" value="Incorrect" name='Correctness'> Incorrect<br>
+            <input type=submit value="确认" name='feedback_button'>
+            <input type="hidden" value="{{ result['prediction'] }}" name='prediction'>
+            <input type="hidden" value="{{ fname }}" name='filename'>
+        </form>
+    </div>
+</body>
+</html>
