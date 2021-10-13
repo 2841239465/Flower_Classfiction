@@ -12,7 +12,7 @@ MEAN_RGB=[0.485, 0.456, 0.406]
 STED_RGB=[0.229, 0.224, 0.225]
 
 # 指定类别名称
-label_names = ['cardboard', 'glass', 'metal', 'paper', 'plastic']
+label_names = ['daisy', 'dandelion', 'rose', 'sunflower', 'tulip']
 
 # 指定硬件设备
 device = torch.device('cpu') # 指定cpu
